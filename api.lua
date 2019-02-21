@@ -14,14 +14,14 @@ kiosk.add_inventar=function(name,buy_value,sell_value,stock)
 	if sell_value == nil then
 		sell_value=kiosk.sell_factor * buy_value
 	end
-	if sell_value > buy_factor then
+	if sell_value > buy_value then
 		sell_value=kiosk.sell_factor * buy_value
 	end
 	if stock == nil then
 		stock = 0
 	end
 	
-	if kiok.inventar[name] == nil then
+	if kiosk.inventar[name] == nil then
 		kiosk.inventar[name] = {name = name,
 			sell = sell_value,
 			buy = sell_value,
